@@ -79,7 +79,9 @@ public class Application implements Consumer<Event> {
         } else if (e instanceof EventWindowCloseRequest) {
             window.close();
         }else if (e instanceof EventFrameSkija ee) {
+            // получаем поверхность рисования
             Surface s = ee.getSurface();
+            // очищаем её канвас заданным цветом
             s.getCanvas().clear(APP_BACKGROUND_COLOR);
         }
     }
